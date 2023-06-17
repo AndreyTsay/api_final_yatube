@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>API_FINAL_YATUBE.md</title><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=TB3x5sPw2JHtAlU4IMjSo38UvWvGPT3XZxFelN7KlK9rOAOGocPjMNYhyKWizVlFGS3H7kXT4bV7ye8tHarCXg" charset="UTF-8"></script><style></style></head><body id="preview">
+<!DOCTYPE html><html><head><meta charset="utf-8">
 <h1 class="code-line" data-line-start="0" data-line-end="1"><a id="API_FINAL_YATUBE_0"></a>API_FINAL_YATUBE</h1>
 <p class="has-line-data" data-line-start="4" data-line-end="5">API для Yatub представляет собой проект социальной сети в которой реализованы следующие возможности, публиковать записи, комментировать записи, а так же подписываться или отписываться от авторов.</p>
 <h2 class="code-line" data-line-start="31" data-line-end="32"><a id="Tech_31"></a>Tech</h2>

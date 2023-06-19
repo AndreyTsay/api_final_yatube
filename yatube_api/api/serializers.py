@@ -3,7 +3,7 @@ from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 from rest_framework.validators import UniqueTogetherValidator
 
-import posts.models as ps
+import posts.models as models
 
 User = get_user_model()
 
@@ -13,7 +13,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = ('id', 'text', 'pub_date', 'author', 'image', 'group')
-        model = ps.Post
+        model = models.Post
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -24,12 +24,12 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ('id', 'author', 'post', 'text', 'created')
         read_only_fields = ('post',)
-        model = ps.Comment
+        model = models.Comment
 
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ps.Group
+        model = models.Group
         fields = ('id', 'title', 'slug', 'description')
 
 
@@ -51,11 +51,11 @@ class FollowSerializer(serializers.ModelSerializer):
         return data
 
     class Meta:
-        model = ps.Follow
+        model = models.Follow
         fields = ('user', 'following')
         validators = (
             UniqueTogetherValidator(
-                queryset=ps.Follow.objects.all(),
+                queryset=models.Follow.objects.all(),
                 fields=('user', 'following'),
                 message='Подписка уже оформлена'
             ),
